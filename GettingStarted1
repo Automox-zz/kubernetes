@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-nginx
+  labels:
+    app: super-cool-app
+spec:
+  containers:
+  - name: super-cool-app
+    image: nginx:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - name: http
+      containerPort: 80
